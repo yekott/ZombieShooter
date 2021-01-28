@@ -10,5 +10,5 @@
 ### 스텐실 & 집 투명화
 ![ZombieShooterStencil](https://user-images.githubusercontent.com/50022423/106048894-ca90b780-6128-11eb-91e7-8b6be4825f66.gif)
 
-### 일정하게 원하는 세팅을 넘겨받고 맵을 생성 가능
+### 랜덤거리 
 ![ZombieShooterRandomMap](https://user-images.githubusercontent.com/50022423/106049648-c2854780-6129-11eb-8ab7-be82a4704cda.gif)
