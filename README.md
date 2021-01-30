@@ -3,38 +3,37 @@
 
 ## 주요 코드 설명
 
--Assets/
   - Scripts/
     - AI/
       - EnemyController.cs (좀비(적 유닛) 컨트롤러 소스코드)
     - CityBuilder/
       - ScriptableObject/
         - Building.cs (건물 Prefab과 해당 건물의 기본 자료)
-        - BuildingList.cs (Building.cs ScriptableObjects를 담고 있는 ScriptableObject)
-        - BuildingContanier.cs (Container를 담고있는 Building에서 실행시킬 MonoBehavior)
-        - Container.cs (LootableItem 을 담으려고 했던 Container)
-        - LootableItem.cs (루팅 가능한 아이템을 모으려고 했던 코드) # 미구현
-        - Plains.cs (도시를 지을 environment Prefab을 모아둔 Scriptable Object)
+        - BuildingList.cs (Building.cs 를 담고 있는 스크립터블 오브젝트)
+        - BuildingContanier.cs (Container를 담고있는 Building에서 실행시킬 모노스크립트)
+        - Container.cs (LootableItem 을 담으려고 했던 스크립트)
+        - LootableItem.cs (루팅 가능한 아이템을 모으려고 했던 스크립터블 오브젝트) # 미구현
+        - Plains.cs (도시를 지을 environment Prefab을 모아둔 스크립터블 오브젝트)
       - Simulator/
         - CityGenerator.cs 
         - WeatherCyCle.cs
     - Controller/
-      - AnimatorHook.cs
-      - CameraController.cs
-      - Controller.cs
-      - InputManager.cs
-      - Interfaces.cs
-      - LevelObject.cs
-      - PlayerMenu.cs
+      - AnimatorHook.cs (ik animation, 무기마다 고정된 손 위치를 추적하기 위해 만든 스크립트)
+      - CameraController.cs (Camera를 선택된 메인 캐릭터를 부드럽게 따라다니도록 만든 스크립트)
+      - Controller.cs (메인캐릭터 animator, rotate, position, weapon 조작 해주는 스크립트)
+      - InputManager.cs (inputmanager)
+      - Interfaces.cs (현재는 맞았을때 처리할 OnHit 밖에 없지만 interface를 통해서 스크립트마다 특징을 만들어 줄 수 있음.)
+      - LevelObject.cs (OnHit이 제대로 설정되는지 확인한 더미용 스크립트)
+      - PlayerMenu.cs (플레이어의 key입력을 받아서 ui 호출하거나 꺼주는 스크립트)
     - Item/
-      - Ammo.cs
-      - Bullets.cs
-      - Item.cs
-      - MagazineHook.cs
-      - Weapon.cs
-      - WeaponHook.cs
+      - Ammo.cs (각 총별로 저장될 데이터를 모아둔 스크립터블 오브젝트)
+      - Bullets.cs (발사된 총알의 스크립트(여기서 총알의 방향, 위치를 정해줌.), 데미지나 속도는 Ammo에서 받아옴)
+      - Item.cs (모든 아이템의 부모 스크립터블 오브젝트)
+      - MagazineHook.cs (현재 해당 탄창안에 들어가있는 Ammo의 종류를 스택으로 받아둠.)
+      - Weapon.cs (각 총별로 저장될 데이터를 모아둔 스크립터블 오브젝트)
+      - WeaponHook.cs (Weapon을 가지고 데이터를 주고 받을 스크립트)
     - ObjectPool/
-      - ObjectPool.cs
+      - ObjectPool.cs (instantiate, Delete 가 너무 빈번해지면 비용이 너무 높아지기 때문에 SETACTIVE로 껏다 켰다 하면서 오브젝트를 나누어줄 오브젝트 풀입니다.)
 
 ## 게임 화면 스크린샷
 ### 야간전
